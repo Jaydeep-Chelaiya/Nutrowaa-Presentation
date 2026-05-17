@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-nutro-green: #15803d;
+  --color-nutro-green-light: #22c55e;
+  --color-nutro-orange: #f97316;
+  --color-nutro-yellow: #facc15;
+  --color-nutro-white: #ffffff;
+  --color-nutro-cream: #fdfcf7;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-100 overflow-hidden font-sans;
+  }
+}
+
+.slide-content {
+  @apply min-h-full w-full flex flex-col p-8 md:p-16 max-w-7xl mx-auto relative;
+}
+
+.presenter-notes-area {
+  @apply fixed bottom-0 left-0 right-0 bg-zinc-900 border-t border-zinc-800 p-4 transform transition-all duration-300 z-50;
+}
+
+.card-hover-effect {
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-nutro-green/20;
+}
+
+/* Custom scrollbar for presenter notes */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-zinc-800;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-700 rounded-full hover:bg-zinc-600;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}

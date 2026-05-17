@@ -1,0 +1,6 @@
+{
+  "name": "Nutrowaa - Healthy Tiffin Presentation",
+  "description": "A professional, interactive presentation for Nutrowaa healthy school tiffin services, featuring data-driven insights and engaging visuals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
